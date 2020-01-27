@@ -6,9 +6,7 @@ const route = Router();
 module.exports = {
   initialize() {
     route.get('/marvel/characters', CharacterController.list);
-    route.get('/marvel/pop', CharacterController.pop);
-    // route.get('/marvel/characters/:id/comics', CharacterController.detail);
-
+    route.get('/marvel/characters/:id/comics', CharacterController.getComics);
     return route;
   },
 };

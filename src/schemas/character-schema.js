@@ -5,7 +5,7 @@ const CharacterSchema = mongoose.Schema({
   name: String,
   description: String,
   thumbnail: String,
-  comics: Array,
+  comics: [],
 });
 
 module.exports = mongoose.model('Character', CharacterSchema);
