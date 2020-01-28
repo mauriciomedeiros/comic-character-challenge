@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "initialize": "node populate-db.js",
     "dev": "node node_modules/nodemon/bin/nodemon.js server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint 'src/**/*.js' --fix",

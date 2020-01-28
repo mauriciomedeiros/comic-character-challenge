@@ -45,11 +45,12 @@ module.exports = {
 
   async findAndSeveCharactes() {
     const containsCharacteres = await CharacterSchema.countDocuments();
+    console.log(containsCharacteres);
     if (containsCharacteres !== 0) {
       return;
     }
     const characters = await axios.default.get(
-      `${BASEURL}characters?ts=1&apikey=bce7b1e856554ab646ff3497dfed63bf&hash=1e8b1665568466c52cbeb82b081b7608&limit=10`
+      `${BASEURL}characters?ts=1&apikey=bce7b1e856554ab646ff3497dfed63bf&hash=1e8b1665568466c52cbeb82b081b7608&limit=50`
     );
     let c = [];
     for (const element of characters.data.data.results) {
