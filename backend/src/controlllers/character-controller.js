@@ -11,4 +11,9 @@ module.exports = {
     const comics = await CharacterService.getComicsById(marvelCharacterId);
     return res.json({ comics: comics.comics });
   },
+
+  async populate(req, res) {
+    const characters = await CharacterService.findAndSeveCharactes();
+    return res.json({ characters });
+  },
 };

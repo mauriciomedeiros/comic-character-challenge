@@ -7,6 +7,7 @@ module.exports = {
   initialize() {
     route.get('/marvel/characters', CharacterController.list);
     route.get('/marvel/characters/:id/comics', CharacterController.getComics);
+    route.get('/marvel/populate', CharacterController.populate);
     return route;
   },
 };
