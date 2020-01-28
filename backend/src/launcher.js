@@ -18,7 +18,7 @@ module.exports = {
   run() {
     app
       .listen(this.port, () => {
-        console.log(`Listenning at http://localhost: ${this.port}`);
+        console.log(`Listenning at http://localhost:${this.port}`);
       })
       .on('error', err => {
         console.log(`Err: Error listen server: ${err}`);

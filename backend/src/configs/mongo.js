@@ -2,21 +2,15 @@ const mongoose = require('mongoose');
 
 class Mongo {
   constructor() {
-    this.server = '172.17.0.2'; //this._connectionServer();
-    this.port = '27017'; //process.env.DB_PORT;
-    this.database = 'Challenge'; //process.env.DB_NAME;
-    // this.user = process.env.DB_USER;
-    // this.pass = process.env.DB_PASSWORD;
+    this.server = process.env.DATABASE_URI; //'localhost';
+    this.port = '27017';
+    this.database = 'Challenge';
     this.connect();
   }
 
   connect() {
     mongoose
-      .connect(
-        `mongodb://${this.server}:${this.port}/${this.database}`,
-        // { user: this.user, pass: this.pass, useNewUrlParser: true }
-        { user: this.user, pass: this.pass, useNewUrlParser: true }
-      )
+      .connect(`mongodb://${this.server}:${this.port}/${this.database}`)
       .then(() => {
         console.log('Database connection successful');
       })
@@ -25,13 +19,6 @@ class Mongo {
         console.log('Database connection error');
       });
   }
-
-  // _connectionServer() {
-  //   let server;
-  //   if (process.env.DB_HOST2)
-  //     return (server = [process.env.DB_HOST].concat([process.env.DB_HOST2]));
-  //   return (server = process.env.DB_HOST);
-  // }
 }
 
 module.exports = new Mongo();

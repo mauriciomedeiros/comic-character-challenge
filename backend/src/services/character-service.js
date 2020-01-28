@@ -8,7 +8,7 @@ const BASEURL = 'https://gateway.marvel.com:443/v1/public/';
 // bad code, it's wrong
 const getComic = async marvelCharacterId => {
   const comicsMarvel = await axios.default.get(
-    `${BASEURL}/characters/${marvelCharacterId}/comics?ts=1&apikey=bce7b1e856554ab646ff3497dfed63bf&hash=1e8b1665568466c52cbeb82b081b7608&limit=100`
+    `${BASEURL}/characters/${marvelCharacterId}/comics?ts=1&apikey=bce7b1e856554ab646ff3497dfed63bf&hash=1e8b1665568466c52cbeb82b081b7608&limit=50`
   );
   const comics = [];
 
@@ -50,7 +50,7 @@ module.exports = {
       return;
     }
     const characters = await axios.default.get(
-      `${BASEURL}characters?ts=1&apikey=bce7b1e856554ab646ff3497dfed63bf&hash=1e8b1665568466c52cbeb82b081b7608&limit=50`
+      `${BASEURL}characters?ts=1&apikey=bce7b1e856554ab646ff3497dfed63bf&hash=1e8b1665568466c52cbeb82b081b7608&limit=20`
     );
     let c = [];
     for (const element of characters.data.data.results) {

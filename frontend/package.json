@@ -4,7 +4,7 @@
   "description": "Project for test",
   "scripts": {
     "postinstall": "bower install",
-    "start": "http-server ./app -a localhost -p 8080"
+    "start": "http-server ./app -a 0.0.0.0 -p 8080"
   },
   "author": "Maurício Medeiros <mauriciomedeiros.05@gmail.com>",
   "license": "MIT",
