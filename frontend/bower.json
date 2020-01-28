@@ -1,0 +1,23 @@
+{
+  "name": "weather-forecast-search",
+  "version": "1.0.0",
+  "authors": [
+    "Maurício Medeiros <mauriciomedeiros.05@gmail.com>"
+  ],
+  "description": "Project for test",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.5.7",
+    "bootstrap": "3.3.6",
+    "angular-route": "1.5.7"
+  },
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

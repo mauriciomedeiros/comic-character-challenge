@@ -1,0 +1,26 @@
+
+<button class="btn btn-primary bt-lg" ng-click="vm.details = null" ng-disabled="weatherForm.$invalid">
+  <span></span> Back
+</button>
+<table class="table">
+  <thead> 
+     <tr>
+        <th scope="col">Cover</th>
+        <th scope="col">Title</th>
+        <th scope="col">Alternative Description</th>
+        <th scope="col">Description</th>
+        <th scope="col">Page Number</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr ng-repeat="comic in vm.details.comics" class="panel panel-default">
+       <td>
+         <img  src="{{comic.cover}}"  width="145" height="260">
+       </td>
+        <td> {{comic.title}}</td>
+        <td>{{comic.alternativeDescription}}</td>
+        <td>{{comic.description}}</td>
+        <td>{{comic.pageNumber}}</td>
+     </tr>
+     </tbody>
+</table>
