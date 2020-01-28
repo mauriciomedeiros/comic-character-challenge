@@ -1,8 +1,7 @@
-#weather-forecast-search
+#comic-character-challenge
 
-run ``` npm install ``` to download the dependencies
+run `npm install` to download the dependencies
 
-run ``` npm start ``` up to the server
-
+run `npm start` up to the server
 
 Open your browser http://localhost:8080/#/weatherApp
